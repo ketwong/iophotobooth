@@ -1,0 +1,89 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Typography */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+}
+
+header h1 {
+  display: inline-block;
+}
+
+/* Navigation */
+nav {
+  float: right;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0 0.5rem;
+  transition: background-color 0.3s;
+}
+
+nav a:hover {
+  background-color: #555;
+}
+
+/* Content */
+.content {
+  padding: 1.5rem;
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1.5rem;
+}
+
+/* Grid layout */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.grid-item {
+  flex-basis: calc(33.333% - 1rem);
+  margin-bottom: 1rem;
+}
+
+.grid-item img {
+  width: 100%;
+  height: auto;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 992px) {
+  .grid-item {
+    flex-basis: calc(50% - 1rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-item {
+    flex-basis: 100%;
+  }
+}
