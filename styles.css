@@ -23,6 +23,7 @@ header {
   background-color: #333;
   color: #fff;
   padding: 1rem;
+  overflow: hidden;
 }
 
 header h1 {
@@ -85,6 +86,21 @@ p {
 @media (max-width: 768px) {
   .grid-item {
     flex-basis: 100%;
+  }
+
+  header h1 {
+    font-size: 24px;
+  }
+
+  nav {
+    float: none;
+    text-align: center;
+  }
+
+  nav a {
+    display: block;
+    padding: 8px;
+    font-size: 14px;
   }
 }
 
