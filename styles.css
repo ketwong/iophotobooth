@@ -1,45 +1,93 @@
-/* General styles */
-body {
+/* Basic reset */
+* {
   margin: 0;
-  font-family: Arial, sans-serif;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* Typography */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Container */
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 20px;
 }
 
+/* Header */
 header {
   background-color: #333;
-  color: white;
-  padding: 1rem 0;
+  color: #fff;
+  padding: 1rem;
 }
 
 header h1 {
-  display: inline;
-  margin-right: 1rem;
+  display: inline-block;
 }
 
+/* Navigation */
 nav {
-  display: inline;
+  float: right;
 }
 
 nav a {
-  color: white;
+  color: #fff;
   text-decoration: none;
-  margin-right: 1rem;
+  padding: 0 0.5rem;
+  transition: background-color 0.3s;
 }
 
 nav a:hover {
-  text-decoration: underline;
+  background-color: #555;
 }
 
+/* Content */
 .content {
-  margin: 2rem 0;
+  padding: 1.5rem;
 }
 
-/* Contact form styles */
+h2 {
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1.5rem;
+}
+
+/* Grid layout */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.grid-item {
+  flex-basis: calc(33.333% - 1rem);
+  margin-bottom: 1rem;
+}
+
+.grid-item img {
+  width: 100%;
+  height: auto;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 992px) {
+  .grid-item {
+    flex-basis: calc(50% - 1rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-item {
+    flex-basis: 100%;
+  }
+}
+
 .form-container {
   display: flex;
   flex-direction: column;
@@ -47,7 +95,6 @@ nav a:hover {
   max-width: 500px;
   margin: 0 auto;
   font-family: Arial, sans-serif;
-  padding: 1rem;
 }
 
 .form-container label {
@@ -84,20 +131,4 @@ nav a:hover {
 
 .form-container button:hover {
   background-color: #0056b3;
-}
-
-/* Responsive styles */
-@media (max-width: 768px) {
-  header h1 {
-    font-size: 1.2rem;
-  }
-
-  nav a {
-    font-size: 0.9rem;
-    margin-right: 0.5rem;
-  }
-
-  .content {
-    margin: 1rem 0;
-  }
 }
