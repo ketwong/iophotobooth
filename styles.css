@@ -1,93 +1,45 @@
-/* Basic reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Typography */
+/* General styles */
 body {
+  margin: 0;
   font-family: Arial, sans-serif;
-  line-height: 1.6;
 }
 
-/* Container */
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 1rem;
 }
 
-/* Header */
 header {
   background-color: #333;
-  color: #fff;
-  padding: 1rem;
+  color: white;
+  padding: 1rem 0;
 }
 
 header h1 {
-  display: inline-block;
+  display: inline;
+  margin-right: 1rem;
 }
 
-/* Navigation */
 nav {
-  float: right;
+  display: inline;
 }
 
 nav a {
-  color: #fff;
+  color: white;
   text-decoration: none;
-  padding: 0 0.5rem;
-  transition: background-color 0.3s;
+  margin-right: 1rem;
 }
 
 nav a:hover {
-  background-color: #555;
+  text-decoration: underline;
 }
 
-/* Content */
 .content {
-  padding: 1.5rem;
+  margin: 2rem 0;
 }
 
-h2 {
-  margin-bottom: 1rem;
-}
-
-p {
-  margin-bottom: 1.5rem;
-}
-
-/* Grid layout */
-.grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.grid-item {
-  flex-basis: calc(33.333% - 1rem);
-  margin-bottom: 1rem;
-}
-
-.grid-item img {
-  width: 100%;
-  height: auto;
-}
-
-/* Media queries for responsive design */
-@media (max-width: 992px) {
-  .grid-item {
-    flex-basis: calc(50% - 1rem);
-  }
-}
-
-@media (max-width: 768px) {
-  .grid-item {
-    flex-basis: 100%;
-  }
-}
-
+/* Contact form styles */
 .form-container {
   display: flex;
   flex-direction: column;
@@ -95,6 +47,7 @@ p {
   max-width: 500px;
   margin: 0 auto;
   font-family: Arial, sans-serif;
+  padding: 1rem;
 }
 
 .form-container label {
@@ -131,4 +84,20 @@ p {
 
 .form-container button:hover {
   background-color: #0056b3;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.2rem;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+    margin-right: 0.5rem;
+  }
+
+  .content {
+    margin: 1rem 0;
+  }
 }
